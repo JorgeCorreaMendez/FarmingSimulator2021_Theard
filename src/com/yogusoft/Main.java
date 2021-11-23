@@ -1,6 +1,8 @@
 package com.yogusoft;
 
 import com.yogusoft.ExceptionHandlers.getInputValue;
+import com.yogusoft.Farms.Farmer;
+import com.yogusoft.Farms.Orchard;
 
 public class Main {
 
@@ -21,5 +23,18 @@ public class Main {
 
         System.out.print("Introduce el número de productores: ");
         int numberProducer = getInputValue.getPositive_Integer();
+
+        Orchard newOrchard = new Orchard(sizeOrchard);
+        System.out.println("------------------------------------------");
+
+        for (int i = 0; i < numberProducer; i++) {
+            Farmer newFarmer = new Farmer("Productor - " + i , newOrchard, numberVegetablesProduced);
+            newFarmer.start();
+        }
+
+        for (int i = 0; i < numberClients; i++) {
+            Consumer newConsumer = new Consumer("Consumidor - " + i, newOrchard, numberVegetablesSell);
+            newConsumer.start();
+        }
     }
 }
