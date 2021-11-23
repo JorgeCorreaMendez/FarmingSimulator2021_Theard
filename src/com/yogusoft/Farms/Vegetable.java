@@ -9,6 +9,10 @@ import java.util.ArrayList;
 public class Vegetable {
     static File fileVegetable = new File("com/yogusoft/Farm/vegetables.txt");
 
+    public static int randomGrowthGenerator(){
+        return (int) ((Math.random() * 1000) + 500);
+    }
+
     public static String randomVegetable(){
         String vegetable = "";
         ArrayList<String> listVegetable = new ArrayList<>();
