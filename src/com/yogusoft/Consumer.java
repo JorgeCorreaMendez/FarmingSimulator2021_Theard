@@ -20,7 +20,7 @@ public class Consumer extends Thread{
 
         try {
             for (int i = 0; i < expectedUnits; i++) {
-                sleep(5000);
+                sleep(3000);
                 vegetable = buffer.get();
                 System.out.println(name + " ha comprado el vegetal: " + vegetable);
                 System.out.println("--------------------------------");

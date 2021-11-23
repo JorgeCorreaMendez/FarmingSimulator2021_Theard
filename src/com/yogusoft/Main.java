@@ -28,12 +28,12 @@ public class Main {
         System.out.println("------------------------------------------");
 
         for (int i = 0; i < numberProducer; i++) {
-            Farmer newFarmer = new Farmer("Productor - " + i , newOrchard, numberVegetablesProduced);
+            Farmer newFarmer = new Farmer("Productor" + i , newOrchard, numberVegetablesProduced);
             newFarmer.start();
         }
 
         for (int i = 0; i < numberClients; i++) {
-            Consumer newConsumer = new Consumer("Consumidor - " + i, newOrchard, numberVegetablesSell);
+            Consumer newConsumer = new Consumer("Consumidor" + i, newOrchard, numberVegetablesSell);
             newConsumer.start();
         }
     }

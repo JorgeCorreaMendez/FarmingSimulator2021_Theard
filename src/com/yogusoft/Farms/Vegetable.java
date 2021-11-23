@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Vegetable {
-    static File fileVegetable = new File("com/yogusoft/Farm/vegetables.txt");
+    static File fileVegetable = new File("src/com/yogusoft/Farms/vegetables.txt");
 
     public static int randomGrowthGenerator(){
-        return (int) ((Math.random() * 1000) + 500);
+        return (int) ((Math.random() * 5000) + 1000);
     }
 
     public static String randomVegetable(){
@@ -18,7 +18,7 @@ public class Vegetable {
         ArrayList<String> listVegetable = new ArrayList<>();
 
         if(!fileVegetable.exists() || fileVegetable.isDirectory()){
-            System.out.println("Error, el fichero no es valido ");
+            System.err.println("Error, el fichero no es valido ");
             System.exit(0);
         } else {
             try (BufferedReader buffer = new BufferedReader(new FileReader(fileVegetable))) {
