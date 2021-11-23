@@ -1,0 +1,15 @@
+lettuce
+cabbage
+onion
+spinach
+potato
+celery
+asparagus
+radish
+broccoli
+artichoke
+tomato
+cucumber
+eggplant
+carrot
+green bean
