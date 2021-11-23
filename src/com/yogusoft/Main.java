@@ -29,6 +29,7 @@ public class Main {
 
         for (int i = 0; i < numberProducer; i++) {
             Farmer newFarmer = new Farmer("Productor" + i , newOrchard, numberVegetablesProduced);
+            newFarmer.setPriority(Thread.MAX_PRIORITY);
             newFarmer.start();
         }
 
